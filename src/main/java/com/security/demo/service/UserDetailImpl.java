@@ -18,6 +18,10 @@ import com.security.demo.model.User;
  */
 public class UserDetailImpl implements UserDetails {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4451402527114192737L;
 	private User user;
 
 	public UserDetailImpl(User user) {
