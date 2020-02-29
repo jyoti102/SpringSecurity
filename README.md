@@ -32,8 +32,8 @@ It's a spring boot security demo project.
 ### ADDING CONFIGURATIONS: USING IN MEMORY USERNAME AND PASSWORD
 -----------------------------------------------------------
 1. Create security config class and extend a class websecurityconfigureadapter to get all the configuration features.
-2. Add the configuration anotation at the class level : @Configuration and @EnableWebSecurity.
-3. Override userdetail service method. and add anotation @Bean.
+2. Add the configuration annotation at the class level : @Configuration and @EnableWebSecurity.
+3. Override userdetail service method. and add annotation @Bean.
 4. In userdetail method:
 		create a list of userdetails. UserDetails is a inbuilt class in spring sercurity.
 		add object to the list. Use inbuilt user class object. User class have its default password encoder. Add role to authenticate
@@ -47,8 +47,8 @@ It's a spring boot security demo project.
 -----------------------------------------------------------
 ### USING DATABASE FOR USERNAME AND PASSWORD FOR VALIDATION
 -----------------------------------------------------------
-1. Create security config class with the required anotations
-2. Now create the method AuthenticationProvider which will return the object of AuthenticationProvider. Add anotation @Bean
+1. Create security config class with the required annotations
+2. Now create the method AuthenticationProvider which will return the object of AuthenticationProvider. Add annotation @Bean
 3. In AuthenticationProvider method:
 		user DaoAuthenticationProvider which is already implemented.
 			 - DaoAuthenticationProvider provider = new DaoAuthenticationProvider()
@@ -108,7 +108,7 @@ It's a spring boot security demo project.
 			.and()
 			
 7. Final configuration
-```
+```java
 		http
 			.csrf().disable()
 			.authorizeRequests().antMatchers("/*").permitAll()
